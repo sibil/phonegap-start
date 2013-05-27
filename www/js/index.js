@@ -37,10 +37,11 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+        document.write("Starting ---- <br/>");
         var options = new ContactFindOptions();
         options.filter=""; 
         var fields = ["name"];
-        document.write("Starting ---- <br/>");
+        document.write("********* ---- <br/>");
         navigator.contacts.find(fields, this.onSuccess, this.onError, options);
         /*
         var parentElement = document.getElementById(id);
