@@ -53,7 +53,7 @@ var app = {
         console.log('Received Event: ' + id);
         */
     }
-    function onSuccess(contacts) {
+    onSuccess: function(contacts) {
         for (var i=0; i<contacts.length; i++) {
             document.write("Display Name = " + contacts[i].displayName + "<br/>");
         }
@@ -61,7 +61,7 @@ var app = {
 
     // onError: Failed to get the contacts
     //
-    function onError(contactError) {
+    onError: function(contactError) {
         alert('onError!');
     }
 
