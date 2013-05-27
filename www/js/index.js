@@ -37,6 +37,11 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+        var options = new ContactFindOptions();
+        options.filter=""; 
+        var fields = ["name"];
+        navigator.contacts.find(fields, this.onSuccess, this.onError, options);
+        /*
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
@@ -45,5 +50,18 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+        */
     }
+    function onSuccess(contacts) {
+        for (var i=0; i<contacts.length; i++) {
+            document.write("Display Name = " + contacts[i].displayName);
+        }
+    }
+
+    // onError: Failed to get the contacts
+    //
+    function onError(contactError) {
+        alert('onError!');
+    }
+
 };
