@@ -40,6 +40,7 @@ var app = {
         var options = new ContactFindOptions();
         options.filter=""; 
         var fields = ["name"];
+        document.write("Starting ---- <br/>");
         navigator.contacts.find(fields, this.onSuccess, this.onError, options);
         /*
         var parentElement = document.getElementById(id);
