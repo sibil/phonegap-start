@@ -54,7 +54,7 @@ var app = {
     }
     function onSuccess(contacts) {
         for (var i=0; i<contacts.length; i++) {
-            document.write("Display Name = " + contacts[i].displayName);
+            document.write("Display Name = " + contacts[i].displayName + "<br/>");
         }
     }
 
