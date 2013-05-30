@@ -24,6 +24,8 @@
     // onSuccess: Get a snapshot of the current contacts
     //
     function onSuccess(contacts) {
+	    document.write("contacts length: " + contacts.length + "<br/>");
+	    console.log("contacts length: " + contacts.length + "<br/>");
         for (var i=0; i<contacts.length; i++) {
             document.write("Display Name = " + contacts[i].displayName + "<br/>");
         }
